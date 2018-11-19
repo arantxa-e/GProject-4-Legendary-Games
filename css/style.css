@@ -1,1 +1,72 @@
+/* Grid CSS */
 
+.header { grid-area: header; }
+.menu { grid-area: menu; }
+.main { grid-area: main; }
+.footer { grid-area: footer; }
+
+.wrapper {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main main main'
+    'footer footer footer footer footer footer';
+  grid-gap: 10px;
+  background-color: #CCCCCC;
+  padding: 10px;
+}
+
+.wrapper > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 0px;
+  font-size: 25px;
+}
+
+/* Header CSS */
+
+.logo {
+  float: left;
+}
+
+.logo img { /* resizing logo */
+  width: 130px;
+  height: auto;
+}
+
+.header nav {
+  overflow: hidden;
+  height: 64px;
+}
+
+.header nav ul {
+  text-align: right;
+  padding: 20px 0;
+}
+
+.header nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.header nav ul li:last-child {
+  margin: 0;
+}
+
+/* Bottom Nav Bar */
+
+.bottomnav ul {
+  float: left;
+}
+
+.bottomnav ul li {
+  display: inline;
+}
+
+.sidebar {
+  overflow: auto;
+  text-align: right;
+}
+
+.sidebar input[type="text"] {
+  width: 80%;
+}
