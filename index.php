@@ -3,26 +3,27 @@
     <div class="menu">
       <h3>Consoles</h3>
         <ul>
-          <li><a href="#">Link</a></li>
-          <li><a href="#">Link</a></li>
-          <li><a href="#">Link</a></li>
-          <li><a href="#">Link</a></li>
+          <li><a href="#">Nintendo</a></li>
+          <li><a href="#">Playstation</a></li>
+          <li><a href="#">XBox</a></li>
+          <li><a href="#">VR</a></li>
         </ul>
 
         <h3>PC</h3>
           <ul>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
+            <li><a href="#">Computer Games</a></li>
+            <li><a href="#">Gaming Desktops</a></li>
+            <li><a href="#">Gaming Laptops</a></li>
+            <li><a href="#">Accessories</a></li>
           </ul>
 
-      <h3>Genres</h3>
+      <h3>Games</h3>
         <ul>
-          <li><a href="#">Link</a></li>
-          <li><a href="#">Link</a></li>
-          <li><a href="#">Link</a></li>
-          <li><a href="#">Link</a></li>
+          <li><a href="#">Latest Releases</a></li>
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Horror</a></li>
+          <li><a href="#">Indie</a></li>
+          <li><a href="#">All Games</a></li>
         </ul>
 
     </div>
