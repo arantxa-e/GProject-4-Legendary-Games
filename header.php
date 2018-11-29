@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -19,16 +25,22 @@
 
         <div class="topnav clearfix">
           <div class="logo">
-            <img src="images/logo.png" alt="">
+            <a href="index.php"><img src="images/logo.png" alt=""></a>
           </div>
 
           <nav>
             <ul>
-              <li><a href="#"><i class="fas fa-star"></i> Wishlist</a></li>
               <li><a href="#"><i class="fas fa-question-circle"></i> Customer Service</a></li>
               <li><a href="#"><i class="fas fa-shopping-cart"></i> Shopping Cart</a></li>
-              <li><a href="#">Register</a></li>
-              <li><a href="login.php">Login</a></li>
+              <?php if ( isset($_SESSION["login"])) { ?>
+                Hello, <?= $_SESSION["username"] ?>:
+                <li><a href="#"><i class="fas fa-star"></i> Wishlist</a></li>
+                <li><a href="#">Account</a></li>
+                <li><a href="logout.php">Logout</a></li>
+                <?php } else { ?>
+                <li><a href="register.php">Register</a></li>
+                <li><a href="login.php">Login</a></li>
+                <?php } ?>
             </ul>
           </nav>
         </div>
