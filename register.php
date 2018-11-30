@@ -1,7 +1,6 @@
 <?php include('header.php'); ?>
 
 <?php
-session_start();
 
 include('config.php');
 
@@ -15,6 +14,8 @@ include('config.php');
     <div class="status">
       <?php
 
+      $validUser = 0;
+
       if(isset($_POST["submit"])) {
 
         $state = $_REQUEST["state"];
@@ -22,7 +23,6 @@ include('config.php');
         $street = $_REQUEST["address"];
         $phone = $_REQUEST["phone"];
         $success = "";
-        $validUser = 0;
 
         if((!empty($_REQUEST["state"])) && (!empty($_REQUEST["phone"])) && (!empty($_REQUEST["address"])) &&
         (!empty($_REQUEST["zip"])) && (!empty($_REQUEST["username"])) && (!empty($_REQUEST["password"]))
@@ -91,7 +91,7 @@ include('config.php');
           mysqli_query($connection, $sql); //(connection variable, query variable)
           mysqli_close($connection);
 
-          echo 'Account creation successful. ';
+          header( "refresh:2;url=index.php" );
         }
 
         if ($validUser == 0) {
@@ -101,41 +101,46 @@ include('config.php');
       }
       ?>
 
+      <?php if($validUser == 1) { ?>
+        You've successfully created an account! Please wait while we redirect you.
+      <?php } ?>
+
     </div>
 
-
+    <div class="loginbox clearfix">
     <form name="input" action="" method="POST">
 
-    <p>Have an account already? Click here to <a href="login.php">sign in</a>!</p>
+    <p>Have an account already? <a href="login.php">Sign in</a>!</p>
 
     <label for="username">Username</label><br>
-    <input type="text" name="username" placeholder="Enter Username"><br>
+    <input type="text" name="username" placeholder="Enter Username" <?php if(isset($_POST["submit"])) { ?>value="<?php $_REQUEST["username"]; ?>" <?php } ?>><br>
+
+    <label for="password">Password</label><br>
+    <input type="password" name="password" placeholder="Enter Password" <?php if(isset($_POST["submit"])) { ?>value="<?php $_REQUEST["password"]; ?>" <?php } ?>><br>
 
     <label for="email">Email</label><br>
-    <input type="email" name="email" placeholder="Enter E-mail"><br>
+    <input type="text" name="email" placeholder="Enter E-mail"><br>
 
     <label for="phone">Phone Number</label><br>
     <input type="text" name="phone" placeholder="Enter Phone number"><br>
 
     <label for="address">Street</label><br>
-    <input type="text" name="address" placeholder="Street"><br>
+    <input type="text" name="address" placeholder="Enter Street"><br>
 
     <label for="city">City</label><br>
-    <input type="text" name="city" placeholder="city"><br>
+    <input type="text" name="city" placeholder="Enter City"><br>
 
     <label for="zip">Zip Code</label><br>
-    <input type="text" name="zip" size="5" maxlength="5" placeholder=""><br>
+    <input type="text" name="zip" size="5" maxlength="5" placeholder="Zip"><br>
 
     <label for="state">State</label><br>
-    <input type="text" name="state" size="2" maxlength="2" placeholder=""><br>
-
-    <label for="password">Password</label><br>
-    <input type="password" name="password" placeholder="Enter Password"><br>
+    <input type="text" name="state" size="2" maxlength="2" placeholder="XX"><br>
 
 
     <input type="submit" name="submit" value="Register"><br>
 
   </form>
+</div>
 
 </div>
 

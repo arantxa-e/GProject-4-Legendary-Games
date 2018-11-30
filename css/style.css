@@ -1,4 +1,6 @@
 /* Grid CSS */
+@import url('https://fonts.googleapis.com/css?family=Roboto|Chakra+Petch:700');
+
 
 .header { grid-area: header; }
 .menu { grid-area: menu; }
@@ -11,15 +13,28 @@
     'header header header header header header'
     'menu main main main main main'
     'footer footer footer footer footer footer';
-  grid-gap: 10px;
-  background-color: #CCCCCC;
-  padding: 10px;
+  grid-gap: 6px;
+  background-color:  #EDF0F7;
+  padding: 6px;
 }
 
 .wrapper > div {
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 0px;
-  font-size: 25px;
+  background-color: white;
+  color: #3e88b9;
+  font-size: 16px;
+}
+
+/*Fonts*/
+body, li
+{
+  font-family: 'Roboto', Geneva, sans-serif;
+  line-height: 2em;
+  color: #373f51;
+}
+
+body p {
+  color: #373f51;
+  margin-bottom: 10px;
 }
 
 /* Header CSS */
@@ -33,9 +48,25 @@
   height: auto;
 }
 
+/*.header > div
+{
+  background-color: white;
+}
+*/
+
+.header
+{
+  font-family: 'Roboto', Geneva, sans-serif;
+  padding-top: 25px;
+  padding-bottom: 8px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
 .header nav {
   overflow: hidden;
   height: 64px;
+  text-decoration: none;
 }
 
 .header nav ul {
@@ -52,21 +83,381 @@
   margin: 0;
 }
 
+
 /* Bottom Nav Bar */
+
+.bottomnav
+{
+  background-color: #3A88BC;
+  padding: 20px;
+  border-radius: 6px;
+}
 
 .bottomnav ul {
   float: left;
+  margin-top: 3px;
 }
 
 .bottomnav ul li {
   display: inline;
 }
 
+.bottomnav a
+{
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.bottomnav li a:hover:not(.active)
+{
+    background-color: #b9cee5;
+    color: #1b1b1b;
+}
+
 .sidebar {
+  padding-right: 0px;
   overflow: auto;
   text-align: right;
 }
 
 .sidebar input[type="text"] {
+  width: 90%;
+  border: 1px solid #3A88BC;
+  border-radius: 4px;
+}
+
+.menu {
+  min-width: 240px;
+}
+
+.menu, .main
+{
+   padding-top: 60px;
+   padding-bottom: 60px;
+   padding-left: 25px;
+   padding-right: 25px;
+}
+
+.menu ul
+{
+  padding: 15px;
+}
+
+.menu h3
+{
+  font-family: 'Chakra Petch', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: #1B1B1E;
+}
+
+a {
+  color: #3A88BC;
+  text-decoration: none;
+  padding: 2px;
+  border-radius: 2px;
+}
+
+a:hover:not(.active) {
+    background-color: #b9cee5;
+    color: white;
+}
+
+.main a:hover, .logo a:hover {
+  color: #1b1b1b;
+  background: none;
+}
+.menu li a:hover:not(.active)
+{
+    text-decoration: underline solid #b9cee5 ;
+/*    background-color: #b9cee5; */
+    color: #373f51;
+    background: none;
+    padding-bottom: 3px;
+}
+/* Jess CSS */
+
+#categories{
+     width: 900px;
+     height: auto;
+     overflow: hidden;
+     border: 0px solid;
+     margin-top: 10px;
+     padding-bottom: 60px;
+     font-family: 'Roboto', sans-serif;
+     line-height: 1.3em;
+}
+
+.item {
+     width: 290px;
+     height: 340px;
+     border: 0px solid;
+     float: left;
+     text-align: center;
+}
+
+
+.two {
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+.title{
+    text-decoration: none;
+    color: #1B1B1B;
+}
+
+.title h2 {
+  font-family: 'Chakra Petch', sans-serif;
+  font-weight: bold;
+}
+
+.text{
+  text-decoration: none;
+  color: #1B1B1B;
+  font-size: 13px;
+  display: block;
+  padding: 3px;
+
+}
+
+.name{
+  text-decoration: none;
+  color: #1B1B1B;
+  font-weight: bold;
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 18px;
+}
+
+.loginbox{
+    width: 380px;
+    background: #b9cee5;
+    color: #1B1B1B;
+    font-family: 'Roboto', sans-serif;
+    margin: 0 auto;
+    /*position: absolute;*/
+    font-size: 15px;
+    box-sizing: border-box;
+    padding: 20px 30px;
+    border-radius: 2px;
+
+}
+
+.avatar{
+     width: 100px;
+     height: 100px;
+     border-radius: 50%;
+     display: block;
+     margin: 0 auto;
+     /*position: absolute;
+     top: -15%;
+     left: calc(50% - 50px);*/
+}
+
+.loginbox p{
+   text-align: center;
+   padding: 20px;
+}
+
+.loginbox label {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+.loginbox input {
+   width: 100%;
+   margin-bottom: 20px;
+}
+
+.loginbox input[type="text"], input[type="password"]
+{
+   border: none;
+   border-bottom: 1px solid #fff;
+   background: transparent;
+   outline: none;
+   height: 40px;
+   color: #1B1B1B;
+   font-size: 16px;
+}
+
+.loginbox input[type="submit"]
+{
+     border: none;
+     outline: none;
+     height: 40px;
+     background: #3A88BC;
+     color: #fff;
+      font-size: 16px;
+      transition: 0.3s;
+      border-radius: 2px;
+}
+
+.loginbox input[type="submit"]:hover {
+  background-color: #373f51;
+  cursor: pointer;
+}
+
+
+/* Domenic CSS */
+
+#product_main_container {
+	margin: auto;
+	width: 90%;
+	border-radius: 10px;
+}
+
+#product_image_area {
+	margin: auto;
+	margin-bottom: 3px;
+  width: 100%;
+	min-height: 150px;
+}
+
+#product_image_area img {
+	margin: auto;
+  padding: 10px 0;
+  width: 100%;
+  border-radius: 2px;
+}
+
+#product_purchase {
+	height: 50px;
+	border-radius: 3px;
+	border: 1px solid #b9cee5;
+	margin-bottom: 5px;
+	padding: 20px;
+}
+
+#price_tag {
+  display: block;
+  float: left;
+	margin-top: 10px;
+	width: 50px;
+  color: #000;
+  font-weight: bold;
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 50px;
+}
+
+#product_description h4 {
+  color: #000;
+  font-size: 25px;
+  font-family: 'Chakra Petch', sans-serif;
+  margin-bottom: 20px;
+}
+
+#product_purchase a {
+	float: right;
+	margin-right: 5px;
+	padding: 12px 30px;
+	border-radius: 3px;
+	text-decoration: none;
+	text-align: center;
+	color: #FFF;
+	display: inline-block;
+	background-color: #3a88bc;
+}
+
+#product_purchase a:hover {
+	background-color: #b9cee5;
+	color: #000;
+}
+
+#product_description {
+	min-height: 200px;
+	border-radius: 3px;
+	border: 1px solid #b9cee5;
+	padding: 20px;
+}
+
+/* Ronnie CSS */
+.center {
+  width: 90%;
+  margin: 0 auto;
+}
+
+a {
+  transition: 0.3s;
+}
+
+.topnav {
+  padding-bottom: 20px;
+}
+
+.main h1
+{
+  font-family: 'Chakra Petch', sans-serif;
+  font-weight: bold;
+  font-size: 35px;
+  color: #1B1B1E;
+  padding-bottom: 40px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.hello {
+  text-transform: uppercase;
+  color: #1B1B1B;
+  font-size: 0.8em;
+}
+
+.status {
+  text-align: center;
+  color: #1B1B1E;
+  padding: 10px 0;
+}
+.search-container {
   width: 80%;
+  margin: 0 auto;
+}
+.search-container h2 {
+  font-family: 'Chakra Petch', sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  color: #1b1b1b;
+  margin-bottom: 10px;
+}
+
+.search-container p {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.search-container img {
+  max-width: 400px;
+  display: block;
+  margin: 0 auto;
+}
+
+.sidebar input[type="text"]
+{
+   border: none;
+  background: rgba(0, 0, 0, 0.1);
+   outline: none;
+   height: 37px;
+   color: #FFF;
+   font-size: 16px;
+     padding: 0 10px;
+     border-radius: 2px;
+}
+
+.sidebar input[type="submit"]
+{
+     border: none;
+     outline: none;
+     height: 37px;
+     padding: 0 10px;
+     background: rgba(0, 0, 0, 0.1);
+     color: #fff;
+      font-size: 16px;
+      transition: 0.3s;
+      border-radius: 2px;
+}
+
+.sidebar input[type="submit"]:hover {
+  background-color: #373f51;
+  cursor: pointer;
 }

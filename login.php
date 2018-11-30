@@ -29,19 +29,23 @@
              $_SESSION["login"] = true;
              $_SESSION["username"] = $_POST["username"];
 
-             header( "refresh:3;url=index.php" );
+             header( "refresh:2;url=index.php" );
            } else {
-              echo 'Your Login Name or Password is invalid';
+              echo 'Your Login Name or Password is invalid. Please try again.';
            }
         }
 
       ?>
 
       <?php if($count == 1) { ?>
-        Congratulations! You've logged in. Please wait while we redirect you.
+        Congratulations! You've logged in. Please hold while we redirect you.
       <?php } ?>
 
     </div>
+
+    <div class="loginbox clearfix">
+
+      <img src="images/avatar.png" class="avatar">
 
     <p>Don't have an account? <a href="register.php">Click here</a> to register!</p>
 
@@ -57,6 +61,7 @@
       <input type="submit" value="Login" name="submit" />
     </form>
   </div>
+</div>
 
 
 <?php include('footer.php'); ?>
